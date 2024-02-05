@@ -28,7 +28,7 @@ FIND_PACKAGE(catkin REQUIRED COMPONENTS
   visualization_msgs
   sensor_msgs
   image_transport
-  cv_bridge
+  cv_bridge_1
   tf
   svo
   svo_msgs

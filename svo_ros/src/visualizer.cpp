@@ -138,7 +138,7 @@ void Visualizer::publishMinimal(
           cv::rectangle(img_rgb,
                         cv::Point2f((*it)->px[0]-2, (*it)->px[1]-2),
                         cv::Point2f((*it)->px[0]+2, (*it)->px[1]+2),
-                        cv::Scalar(0,255,0), CV_FILLED);
+                        cv::Scalar(0,255,0), cv::FILLED);
       }
     }
     else if(img_pub_level_ == 1){//point size 3x3
@@ -146,7 +146,7 @@ void Visualizer::publishMinimal(
         cv::rectangle(img_rgb,
                       cv::Point2f((*it)->px[0]/scale-1, (*it)->px[1]/scale-1),
                       cv::Point2f((*it)->px[0]/scale+1, (*it)->px[1]/scale+1),
-                      cv::Scalar(0,255,0), CV_FILLED);
+                      cv::Scalar(0,255,0), cv::FILLED);
     }else{ //point size 1x1
       for(Features::iterator it=frame->fts_.begin(); it!=frame->fts_.end(); ++it){
 	cv::Vec3b &p=  img_rgb.at<cv::Vec3b>((*it)->px[1]/scale, (*it)->px[0]/scale);
